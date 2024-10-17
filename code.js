@@ -19,7 +19,47 @@ images.forEach(image => {
 let isVideoPlaying = false;
 
 
+document.getElementById('webinfob').addEventListener('click',function() {
+    const overlay = document.getElementsByClassName('overlay')[0];
+    overlay.style.filter = 'blur(15px)'; 
+    overlay.style.opacity = '20%'; 
+    document.querySelectorAll('h1, img').forEach(element => {
 
+        
+
+        if (!document.getElementById('webinfoc').contains(element)) {
+            // Apply styles to elements not inside the object with id "webinfoc"
+            element.style.opacity = '20%';
+            element.style.filter = 'blur(16px)';
+        }
+    });
+    
+
+document.getElementById('webinfoc').style.opacity = '100%'
+document.getElementById('webinfoc').style.filter = 'blur(0px)'
+
+
+
+
+
+});
+document.getElementById('aboutmeb').addEventListener('click',function() {
+    const overlay = document.getElementsByClassName('overlay')[0];
+    overlay.style.filter = 'blur(15px)'; 
+    overlay.style.opacity = '20%'; 
+    document.querySelectorAll('h1, img').forEach(element => {
+      
+
+
+        element.style.opacity= '20%';
+        element.style.filter = 'blur(16px)'; 
+});
+
+document.getElementById('aboutmec').style.opacity = '100%'
+
+document.getElementById('aboutmec').style.filter = 'blur(0px)'
+
+});
 document.querySelectorAll('.card').forEach(image => {
     image.addEventListener('click', function() {
         const imageName = this.src.split('/').pop(); 
@@ -30,13 +70,13 @@ document.querySelectorAll('.card').forEach(image => {
         overlay.style.filter = 'blur(15px)'; 
         overlay.style.opacity = '20%'; 
         document.querySelectorAll('h1, img').forEach(element => {
-            if(element.parentElement != aboutmec) {
+          
     
                 
             
             element.style.opacity= '20%';
             element.style.filter = 'blur(16px)'; 
-    }});
+    });
         const videoPlayer = document.getElementById('videoPlayer');
         
         if (!isVideoPlaying) {
@@ -69,15 +109,15 @@ document.getElementsByClassName('overlay')[0].addEventListener('click', function
     if (e.target === this) {
         this.style.filter = 'blur(5px)'; 
         this.style.opacity = '100%'; 
-        
-        document.querySelectorAll('h1, img').forEach(element => {
-            element.style.opacity = '100%';
-            element.style.filter = 'blur(0px)'; 
+
+
+            document.querySelectorAll('h1, img').forEach(element => {
+               element.style.filter = ''; 
+               element.style.opacity = ''; 
+            
         });
-        aboutmec.querySelectorAll('h1, img').forEach(element => {
-            element.style.opacity= '0%';
-            element.style.filter = 'blur(0px)'; 
-        });
+              document.getElementById('aboutmec').style.opacity = '0%'
+document.getElementById('webinfoc').style.opacity = '0%'
         const videoPlayer = document.getElementById('videoPlayer');
         videoPlayer.style.opacity = '0%';
         videoPlayer.style.filter = 'blur(15px)'; 
