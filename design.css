@@ -16,7 +16,6 @@ body, html {
     background-image: url("dbf1c290de20c41e277b493728c47e3d.png");
   z-index: 0;
     filter: blur(5px);
-    -webkit-filter: blur(5px);
     padding-left: 0px;
     padding-right: 0px;
     padding-top: 0px;
@@ -27,6 +26,9 @@ body, html {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 50%;
+    transition: all 1s;
+    background-color: black;
+    opacity: 100%;
   }
 
 
@@ -62,6 +64,84 @@ transition: all 1s;
   color: aliceblue;
   font-size: 60px;
   text-align: center;
-  left: 50%;
+  left: 36%;
+  transition: all 0.5s;
   font-family: 'GexFont';
+}
+
+.collection {
+    padding: 2px 16px;
+
+   position: absolute; 
+   left: 77px;
+   width: 100%;
+
+   top: 25%;
+   grid-template-columns: 3;
+   grid-template-rows: 2;
+   grid-row: 6;
+  display: inline-table;
+   place-items: center;
+}
+
+#videoPlayer {
+  pointer-events: none;
+  position: absolute;             /* Allows positioning relative to the nearest positioned ancestor */
+  top: 50%;                      /* Move down to the center vertically */
+  left: 50%;                     /* Move right to the center horizontally */
+  transform: translate(-50%, -50%); /* Adjust position to truly center the video */
+  max-width: 80%;                /* Limits the video width */
+  max-height: 80%;               /* Limits the video height */
+  z-index: 999;    
+  transition: all 2s;  
+  opacity: 0%;
+filter: blur(15px);
+}
+
+.card {
+
+
+  width: 100px; 
+  height: auto; 
+transition: all 0.5s;
+
+}
+
+
+
+.card:hover {
+  cursor: pointer;
+  transform: scale(110%);
+  transition: all 0.5s;
+}
+
+#aboutmeb:hover {
+  cursor: pointer;
+opacity: 50%;
+
+
+}
+
+#webinfob:hover {
+  cursor: pointer;
+opacity: 50%;
+
+
+}
+
+.text {
+  color:aliceblue;
+cursor:text;
+pointer-events: none;
+}
+
+.logo {
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  transition: all 0.5s;
+}
+.logo:hover {
+  opacity: 20%;
+  transition: all 0.5s;
 }
