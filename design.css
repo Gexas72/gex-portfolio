@@ -163,3 +163,7 @@ pointer-events: none;
 .card:hover .image-text {
   opacity: 100%;
 }
+
+h2 {
+pointer-events: none;
+}
