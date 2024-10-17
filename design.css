@@ -101,7 +101,7 @@ filter: blur(15px);
 .card {
 
 
-  width: 100px; 
+  width: 130px; 
   height: auto; 
 transition: all 0.5s;
 
@@ -165,5 +165,11 @@ pointer-events: none;
 }
 
 h2 {
+pointer-events: none;
+}
+
+
+
+p {
 pointer-events: none;
 }
