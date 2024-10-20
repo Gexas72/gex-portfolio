@@ -65,7 +65,7 @@ document.querySelectorAll('.card').forEach(image => {
         const imageName = this.src.split('/').pop(); 
         const videoName = imageName.replace('.png', '.mp4'); 
         const videoPath = `videos/${videoName}`; 
-        
+        console.log(videoPath);
         const overlay = document.getElementsByClassName('overlay')[0];
         overlay.style.filter = 'blur(15px)'; 
         overlay.style.opacity = '20%'; 
