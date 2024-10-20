@@ -64,7 +64,7 @@ document.querySelectorAll('.card').forEach(image => {
     image.addEventListener('click', function() {
         const imageName = this.src.split('/').pop(); 
         const videoName = imageName.replace('.png', '.mp4'); 
-        const videoPath = `videos/${videoName}`; 
+        const videoPath = `zivthefire.github.io/gex-portfolio/videos/${videoName}`; 
         console.log(videoPath);
         const overlay = document.getElementsByClassName('overlay')[0];
         overlay.style.filter = 'blur(15px)'; 
